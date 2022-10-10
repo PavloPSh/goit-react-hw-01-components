@@ -1,4 +1,6 @@
 
-export const TransactionHistory = () => {
-    return
+export const TransactionHistory = ({transactions}) => {
+    return (
+        <div></div>
+    )
 }
