@@ -8,6 +8,8 @@ import { Statistics } from './stats/Statistics';
 import { FriendList } from './friendList/FriendList';
 import { TransactionHistory } from './transaction/TransactionHistory';
 
+import { GlobalStyle } from './GlobalStyles';
+
 export const App = () => {
   return (
     <div>
@@ -25,6 +27,8 @@ export const App = () => {
 
       <TransactionHistory items={transactions}/>
       
+      <GlobalStyle />
+
     </div>
   );
 };
