@@ -1,12 +1,10 @@
 import PropTypes from 'prop-types';
 import { StatsWrapper,StatsList } from './Statistics.styled';
 
-export const Statistics = ({ title, stats }) => {
+export const Statistics = ({ title="Upload stats", stats }) => {
     return (
         <StatsWrapper>
-            {title && (
-                <h2>{title}</h2>
-            )}
+            <h2>{title}</h2>
             <StatsList>
                 {
                     stats.map(({ id, label, percentage }) => 
@@ -21,8 +19,9 @@ export const Statistics = ({ title, stats }) => {
     )
 }
 
+
 Statistics.propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     stats: PropTypes.arrayOf(PropTypes.exact({
         id: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired,

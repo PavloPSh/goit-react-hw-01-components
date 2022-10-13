@@ -9,27 +9,35 @@ import { FriendList } from './friendList/FriendList';
 import { TransactionHistory } from './transaction/TransactionHistory';
 
 import { GlobalStyle } from './GlobalStyles';
+import { Box } from 'Box';
+
 
 export const App = () => {
   return (
-    <div>
-      <Profile
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats} 
-      />
+    <Box
+      as='main'
+      display='flex'
+      justifyContent='center'
+      alignItems='center'
+      flexDirection='column'
+      bg='mainBg'>
+        <Profile
+          username={user.username}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          stats={user.stats} 
+        />
 
-      <Statistics title="Upload stats" stats={data} />
+        <Statistics stats={data} />
 
-      <FriendList friends={friends} />
-
-      <TransactionHistory items={transactions}/>
+        <FriendList friends={friends} />
+        
+        <TransactionHistory items={transactions} />
       
-      <GlobalStyle />
+        <GlobalStyle />
 
-    </div>
+    </Box>
   );
 };
 

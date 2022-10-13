@@ -1,30 +1,30 @@
 import PropTypes from 'prop-types';
-import { Wrapper, FriendImg, FriendInfoBox, FriendStatsList, FriendStatsItems } from './Profile.styled';
+import { Wrapper, FriendInfoBox, FriendStatsList } from './Profile.styled';
 
 export const Profile = ({ username, tag, location, avatar, stats:{followers, views, likes}}) => {
     return (
 
         <Wrapper>
             <FriendInfoBox>
-                <FriendImg src={ avatar } alt= { username } />
+                <img src={ avatar } alt= { username } />
                 <p>{ username }</p>
                 <p>@{ tag }</p>
                 <p>{ location }</p>
             </FriendInfoBox>
 
             <FriendStatsList>
-                <FriendStatsItems>
+                <li>
                     <span>Followers</span>
                     <span>{ followers }</span>
-                </FriendStatsItems>
-                <FriendStatsItems>
+                </li>
+                <li>
                     <span>Views</span>
                     <span>{ views }</span>
-                </FriendStatsItems>
-                <FriendStatsItems>
+                </li>
+                <li>
                     <span>Likes</span>
                     <span>{ likes }</span>
-                </FriendStatsItems>
+                </li>
             </FriendStatsList>
         </Wrapper>
     );
