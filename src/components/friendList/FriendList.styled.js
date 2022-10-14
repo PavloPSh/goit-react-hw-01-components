@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const FriendsListContainer = styled.ul`
     width: 250px;
-    margin: 50px auto;
+    margin-top: ${p => p.theme.space[6]}px;
     
 `;
 
@@ -18,17 +18,17 @@ export const FriendsItem = styled.li`
         box-shadow: ${p => p.theme.shadows.normal};
     }
     & span{
-        border-radius: 50%;
+        border-radius: ${p => p.theme.radii.round};
         background-color: ${p => (p.isOnline ? p.theme.colors.success : p.theme.colors.error)};
         width: 10px;
         height: 10px;  
-        margin-left: 10px;
+        margin-left: ${p => p.theme.space[4]}px;
         
     }
     & img{
-        margin-left: 15px;
+        margin-left: ${p => p.theme.space[4]}px;
     }
     & p {
-        margin-left: 20px;
+        margin-left: ${p => p.theme.space[4]}px;
     }
 `;
